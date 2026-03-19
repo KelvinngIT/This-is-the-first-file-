@@ -1,10 +1,10 @@
 name: 每天自動運行 Colab Notebook 並存到 Google Drive
 
 on:
+pull_request:               # ← 暫時只留這行，或加在原本的下面
   schedule:
     - cron: '30 0 * * *'        # 每天香港時間早上 8:30 執行 (UTC 00:30)
   workflow_dispatch:            # 可手動測試
-push:                  # ← 暫時加這段
 jobs:
   run-colab-notebook:
     runs-on: ubuntu-latest
