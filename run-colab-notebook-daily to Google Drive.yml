@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '30 0 * * *'        # 每天香港時間早上 8:30 執行 (UTC 00:30)
   workflow_dispatch:            # 可手動測試
-
+push:                  # ← 暫時加這段
 jobs:
   run-colab-notebook:
     runs-on: ubuntu-latest
